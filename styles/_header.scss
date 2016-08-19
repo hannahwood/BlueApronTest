@@ -21,6 +21,10 @@
                 font-family: $header-font;
                 padding: 0 12px;
                 border-right: 1px solid $nav-li-separators-gray;
+                transition: 0.3s;
+                &:hover {
+                    opacity: 0.8;
+                }
             }
             &:last-child {
                 a {

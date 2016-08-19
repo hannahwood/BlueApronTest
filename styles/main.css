@@ -163,7 +163,10 @@ a {
         font-size: 16pt;
         font-family: "Signika", sans-serif;
         padding: 0 12px;
-        border-right: 1px solid #B2B2B2; }
+        border-right: 1px solid #B2B2B2;
+        transition: 0.3s; }
+        .navbar ul li a:hover {
+          opacity: 0.8; }
       .navbar ul li:last-child a {
         border-right: none;
         padding: 0;
@@ -274,7 +277,10 @@ body {
   #tips-techniques .commentary .text a {
     color: #DC6E2D;
     font-weight: 500;
-    font-size: inherit; }
+    font-size: inherit;
+    transition: 0.3s; }
+    #tips-techniques .commentary .text a:hover {
+      opacity: 0.8; }
     #tips-techniques .commentary .text a #arrow {
       width: 6px; }
 #tips-techniques .more-tips {

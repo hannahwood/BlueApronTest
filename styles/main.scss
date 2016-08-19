@@ -62,6 +62,10 @@ body {
             }
             a {
                 @include text($default-orange, 500, inherit);
+                transition: 0.3s;
+                &:hover {
+                    opacity: 0.8;
+                }
                 #arrow {
                     width: 6px;
                 }
