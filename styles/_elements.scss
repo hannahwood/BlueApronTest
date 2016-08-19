@@ -1,0 +1,94 @@
+// buttons, tips/stories, pagination
+
+@import 'colors';
+
+// buttons
+@mixin button($background-color, $font-color) {
+    background-color: $background-color;
+    border: none;
+    color: $font-color;
+    font-size: 10pt;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.active-button {
+    @include button($default-orange, #fff);
+}
+
+.inactive-button {
+    @include button($button-gray, #fff);
+}
+
+.active-view {
+    @include button(#fff, $default-blue);
+    font-weight: 700;
+    padding: 8px 25px;
+}
+
+.inactive-view {
+    @include button($background-gray, #999999);
+    font-weight: 700;
+    padding: 8px 25px;
+}
+
+// individual tips/stories
+.story-rec {
+    width: 100%;
+    border-top: 1px solid $h1-border-gray;
+    div {
+        display: inline-block;
+        vertical-align: top;
+        img {
+            height: 70px;
+            padding: 5px 0;
+        }
+    }
+    .story-title {
+        padding: 10px;
+        width: calc(70% - 20px);
+        vertical-align: middle;
+    }
+}
+
+// active tip
+.active {
+    background-color: $background-gray;
+}
+
+// pagination for step-by-step instructions
+.pagination {
+    margin: 0;
+    padding: 15px 0 40px;
+    border-bottom: 1px solid $h1-border-gray;
+    .pagination-item {
+        width: 16.3%;
+        display: block;
+        float: left;
+        margin: 4px 0 4px 1px;
+        a {
+            background-color: $pagination-gray;
+            display: block;
+            height: 9px;
+            width: 100%;
+            transition: .3s;
+            &:hover {
+                background-color: $pagination-blue-hover;
+            }
+        }
+        a.active {
+            background-color: $default-blue;
+        }
+        &:first-child a {
+            border-radius: 8px 0 0 8px;
+        }
+        &:last-child a {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+}

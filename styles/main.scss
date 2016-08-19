@@ -1,0 +1,173 @@
+@import 'colors';
+@import 'elements';
+@import 'fonts';
+@import 'header';
+// calculating column widths
+@for $i from 1 through 12 {
+    .col-#{$i}-of-12 {
+        width: ($i / 12) * 100%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: $body-font;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.section {
+    width: 100%;
+    padding: 30px 0 80px;
+    .container {
+        margin: 0 155px;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    .section-header {
+        border-bottom: 1px solid $h1-border-gray;
+        margin-bottom: 40px;
+        padding: 20px 0;
+        align-items: center;
+    }
+    h2 {
+        margin: 0 0 20px;
+    }
+    .right-container {
+        min-width: 300px;
+        padding-left: 40px;
+    }
+}
+
+#tips-techniques {
+    @extend .section;
+    .half {
+        vertical-align: top;
+        width: 50%;
+        min-width: 300px;
+        #full-screen-img {
+            width: 100%;
+        }
+    }
+    .commentary {
+        .text {
+            padding-left: 30px;
+            p {
+                padding-bottom: 10px;
+                margin: 0;
+            }
+            a {
+                @include text($default-orange, 500, inherit);
+                #arrow {
+                    width: 6px;
+                }
+            }
+        }
+    }
+    .more-tips {
+        padding: 15px 0;
+        div {
+            vertical-align: middle;
+            #button-commentary {
+                max-width: 170px;
+                font-size: 9pt;
+                line-height: 1.1em;
+                font-weight: 700;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+#instructions {
+    @extend .section;
+    background-color: $background-gray;
+    img {
+        width: 100%;
+    }
+    .view-container {
+        float: right;
+        vertical-align: middle;
+        border: 1px solid $h1-border-gray;
+        border-radius: 4px;
+        #right-view {
+            border-left: 1px solid $h1-border-gray;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+    .step {
+        margin-bottom: 5px;
+        .step-number {
+            display: inline;
+            background-color: $default-blue;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        h5 {
+            display: inline;
+        }
+    }
+}
+
+
+@media (max-width: 1439px) {
+    .section {
+        .container {
+            margin: 0 80px;
+        }
+    }
+}
+
+@media (max-width: 1079px) {
+    .mobile-100 {
+        width: 100%
+    }
+    .section {
+        .container {
+            margin: 0 5vw;
+        }
+        .right-container {
+            padding: 30px 0;
+        }
+    }
+    #tips-techniques {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 799px) {
+    #tips-techniques {
+        .half {
+            width: 100%;
+            #full-screen-img {
+            	display: none;
+            }
+            .text {
+                padding: 30px 0;
+            }
+        }
+        // viewing the tomato img on smaller screens
+        .mobile-img {
+            background-image: url("../static/tomato-mobile.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+            border-width: 1px 0;
+            box-shadow: 2px 2px 3px $h1-border-gray;
+        }
+        .more-tips {
+            #button-commentary {
+                width: 40vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import 'colors';
+$header-font: 'Signika',
+sans-serif;
+$body-font: "Helvetica Neue";
+@mixin text($color, $weight, $size) {
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+h1 {
+    @include text($default-blue, 500, 23pt);
+}
+
+h2 {
+    @include text($default-blue, 400, 26pt);
+}
+
+h3 {
+    @include text($h3-p-gray, 700, 10pt);
+    margin: 0;
+}
+
+h4 {
+    @include text($default-blue, 500, 14pt);
+    margin: 0;
+}
+
+h5 {
+    @include text($h3-p-gray, 500, 16pt);
+    margin: 0;
+}
+
+p {
+    @include text($h3-p-gray, 400, 11pt);
+    line-height: 18pt;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 1439px) {
+    h1 {
+        font-size:  20pt;
+    }
+    h2 {
+        font-size: 23pt;
+    }
+    h4 {
+        font-size: 11pt;
+    }
+    h5 {
+        font-size: 13pt;
+    }
+}
