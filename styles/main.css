@@ -247,7 +247,6 @@ body {
   width: 100%;
   padding: 30px 0 80px; }
   .section .container, #tips-techniques .container, #instructions .container {
-    margin: 0 155px;
     max-width: 1080px;
     margin: 0 auto; }
   .section .section-header, #tips-techniques .section-header, #instructions .section-header {
@@ -315,13 +314,11 @@ body {
 
 @media (max-width: 1439px) {
   .section .container, #tips-techniques .container, #instructions .container {
-    margin: 0 80px; } }
+    padding: 0 5vw; } }
 @media (max-width: 1079px) {
   .mobile-100 {
     width: 100%; }
 
-  .section .container, #tips-techniques .container, #instructions .container {
-    margin: 0 5vw; }
   .section .right-container, #tips-techniques .right-container, #instructions .right-container {
     padding: 30px 0; }
 

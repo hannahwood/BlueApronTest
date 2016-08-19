@@ -1,7 +1,6 @@
-@import 'colors';
-$header-font: 'Signika',
-sans-serif;
+$header-font: 'Signika',sans-serif;
 $body-font: "Helvetica Neue";
+
 @mixin text($color, $weight, $size) {
     color: $color;
     font-weight: $weight;

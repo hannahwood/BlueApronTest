@@ -1,7 +1,5 @@
 // buttons, tips/stories, pagination
 
-@import 'colors';
-
 // buttons
 @mixin button($background-color, $font-color) {
     background-color: $background-color;
